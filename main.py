@@ -24,6 +24,8 @@ plate = cv2.blur(license_plate, ksize=(40, 40))
 image[y:y + h, x:x + w] = plate
 
 print ('BLURRED License Plate:', text)
+cv2.imwrite('./output/blurred.jpg', image)
+cv2.imwrite('./output/detected.jpg', license_plate) 
 cv2.imshow('Original Plate', license_plate)
 cv2.imshow('Blurred Plate', image)
 cv2.waitKey(0)
